@@ -13,6 +13,8 @@ glide = "5.0.0-rc01"
 retrofit = "2.10.6"
 gson = "2.10.4"
 kotlinPlugin = "1.8.10"
+ktx = "1.1.4"
+playServicesLocation = "21.2.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -27,6 +29,8 @@ androidx-constraintlayout = { group = "androidx.constraintlayout", name = "const
 glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
 retrofit = { group = "io.github.zawn.retrofit2", name = "retrofit", version.ref = "retrofit" }
 gson = { group = "io.github.zawn.retrofit2", name = "gson", version.ref = "gson" }
+ktx = { group = "com.github.permissions-dispatcher", name = "ktx", version.ref = "ktx" }
+play-services-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "playServicesLocation" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

@@ -4,17 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
-    android:padding="2dp"
-    tools:parentTag="LinearLayout">
+    android:gravity="center_horizontal|center_vertical"
+    android:orientation="vertical">
 
-    <ImageView
+    <com.example.movies.AspectRatioImageView
         android:id="@+id/coverImageView"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:background="#000000"
         android:scaleType="fitCenter"
+        app:ratio="1.5"
         app:srcCompat="@drawable/ic_launcher_background"
         tools:srcCompat="@tools:sample/avatars" />
 

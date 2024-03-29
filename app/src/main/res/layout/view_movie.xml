@@ -12,9 +12,10 @@
         android:id="@+id/coverImageView"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:scaleType="centerCrop"
+        android:background="#000000"
+        android:scaleType="fitCenter"
         app:srcCompat="@drawable/ic_launcher_background"
-        tools:srcCompat="@tools:sample/avatars"/>
+        tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/titleTextView"

@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.widget.LinearLayoutCompat
-import com.example.movieswiki.model.MovieModel
+import com.example.movieswiki.model.MovieViewModel
 
 class MovieView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null
@@ -24,10 +24,5 @@ class MovieView @JvmOverloads constructor(
         title = view.findViewById(R.id.titleTextView)
 
         orientation = VERTICAL
-    }
-
-    fun setMovie(movie: MovieModel) {
-        title.text = movie.title
-        //cover.image = movie.cover
     }
 }

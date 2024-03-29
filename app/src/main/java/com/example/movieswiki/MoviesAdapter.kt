@@ -5,11 +5,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.movieswiki.databinding.ViewMovieBinding
-import com.example.movieswiki.model.MovieModel
+import com.example.movieswiki.model.MovieViewModel
 
 class MoviesAdapter(
-    private val movies: List<MovieModel>,
-    private val listener: (MovieModel) -> Unit
+    var movies: List<MovieViewModel>,
+    private val listener: (MovieViewModel) -> Unit
 ) : RecyclerView.Adapter<MoviesAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -27,13 +27,12 @@ class MoviesAdapter(
     }
 
     class ViewHolder(private val binding: ViewMovieBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun binding(movie: MovieModel) {
+        fun binding(movie: MovieViewModel) {
             binding.titleTextView.text = movie.title
             Glide
                 .with(binding.root.context)
-                .load(movie.coverUrl)
+                .load(movie.getCoverPath())
                 .into(binding.coverImageView)
-
         }
     }
 }

@@ -6,6 +6,7 @@
     android:layout_height="wrap_content"
     android:gravity="center_horizontal"
     android:orientation="vertical"
+    android:padding="2dp"
     tools:parentTag="LinearLayout">
 
     <ImageView
@@ -21,10 +22,12 @@
         android:id="@+id/titleTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#2196F3"
-        android:padding="16dp"
+        android:background="@color/design_default_color_primary"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:padding="8dp"
         android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="#FFFFFF"
-        tools:text="Movie Title"/>
+        tools:text="Movie Title" />
 </LinearLayout>

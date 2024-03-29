@@ -10,6 +10,7 @@ import androidx.core.text.buildSpannedString
 import com.bumptech.glide.Glide
 import com.example.movieswiki.databinding.ActivityFilmDetailBinding
 import com.example.movieswiki.Model.MovieViewModel
+import com.example.movieswiki.R
 
 class MovieDetailActivity : AppCompatActivity() {
 
@@ -31,10 +32,10 @@ class MovieDetailActivity : AppCompatActivity() {
             binding.titleTextView.text = movie.title
             binding.descriptionTextView.text = movie.summary
             binding.detailnfoTextView.text = buildSpannedString {
-                bold { append("Original language: ")}
+                bold { append(getString(R.string.original_language_key))}
                 appendLine(movie.language)
 
-                bold { append("Votes: ")}
+                bold { append(getString(R.string.votes_key))}
                 appendLine(movie.votes.toString())
             }
             Glide.with(this)

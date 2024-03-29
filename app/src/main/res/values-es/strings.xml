@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WikiPeliculas</string>
+    <string name="original_language_key">Idioma original:</string>
+    <string name="votes_key">Votos:</string>
+</resources>

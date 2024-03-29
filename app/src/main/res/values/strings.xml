@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MoviesWiki</string>
+    <string name="original_language_key">Original language:</string>
+    <string name="votes_key">Votes:</string>
 </resources>

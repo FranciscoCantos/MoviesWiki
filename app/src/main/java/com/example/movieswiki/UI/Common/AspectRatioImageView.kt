@@ -1,4 +1,4 @@
-package com.example.movies
+package com.example.movieswiki.UI.Common
 
 import android.content.Context
 import android.util.AttributeSet

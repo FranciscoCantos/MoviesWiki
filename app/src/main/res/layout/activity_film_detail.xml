@@ -6,9 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".FilmDetailActivity">
+    tools:context=".UI.MoviesDetail.MovieDetailActivity">
 
-    <com.example.movies.AspectRatioImageView
+    <com.example.movieswiki.UI.Common.AspectRatioImageView
         android:id="@+id/backdropImage"
         android:layout_width="match_parent"
         android:layout_height="200dp"

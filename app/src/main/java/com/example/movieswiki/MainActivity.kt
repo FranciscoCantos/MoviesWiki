@@ -5,9 +5,11 @@ import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import com.example.movieswiki.UI.MoviesDetail.MovieDetailActivity
+import com.example.movieswiki.UI.MoviesList.MoviesAdapter
 import com.example.movieswiki.databinding.ActivityMainBinding
-import com.example.movieswiki.model.MovieDbClient
-import com.example.movieswiki.model.MovieViewModel
+import com.example.movieswiki.Model.MovieDbClient
+import com.example.movieswiki.Model.MovieViewModel
 import kotlinx.coroutines.launch
 
 data class Person(val name: String, val age: Int)
@@ -41,8 +43,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun navigateToDetail(movie: MovieViewModel) {
-        val intent = Intent(this, FilmDetailActivity::class.java)
-        intent.putExtra(FilmDetailActivity.EXTRA_MOVIE, movie)
+        val intent = Intent(this, MovieDetailActivity::class.java)
+        intent.putExtra(MovieDetailActivity.EXTRA_MOVIE, movie)
         startActivity(intent)
     }
 }

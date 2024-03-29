@@ -1,4 +1,4 @@
-package com.example.movieswiki
+package com.example.movieswiki.UI.MoviesDetail
 
 import android.os.Build
 import android.os.Bundle
@@ -9,9 +9,9 @@ import androidx.core.text.bold
 import androidx.core.text.buildSpannedString
 import com.bumptech.glide.Glide
 import com.example.movieswiki.databinding.ActivityFilmDetailBinding
-import com.example.movieswiki.model.MovieViewModel
+import com.example.movieswiki.Model.MovieViewModel
 
-class FilmDetailActivity : AppCompatActivity() {
+class MovieDetailActivity : AppCompatActivity() {
 
     companion object  {
         const val EXTRA_MOVIE = "FilmDetailActivity:movie"

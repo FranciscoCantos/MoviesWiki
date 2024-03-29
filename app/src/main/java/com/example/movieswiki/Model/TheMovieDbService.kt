@@ -1,6 +1,5 @@
-package com.example.movieswiki.model
+package com.example.movieswiki.Model
 
-import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query
 

@@ -1,4 +1,4 @@
-package com.example.movieswiki.model
+package com.example.movieswiki.Model
 
 data class  MovieDTO(
     val adult: Boolean,

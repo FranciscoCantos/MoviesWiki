@@ -1,4 +1,4 @@
-package com.example.movieswiki.model
+package com.example.movieswiki.Model
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

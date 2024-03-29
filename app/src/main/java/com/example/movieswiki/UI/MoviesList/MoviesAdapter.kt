@@ -1,11 +1,11 @@
-package com.example.movieswiki
+package com.example.movieswiki.UI.MoviesList
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.movieswiki.databinding.ViewMovieBinding
-import com.example.movieswiki.model.MovieViewModel
+import com.example.movieswiki.Model.MovieViewModel
 
 class MoviesAdapter(
     var movies: List<MovieViewModel>,

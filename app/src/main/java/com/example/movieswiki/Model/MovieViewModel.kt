@@ -1,4 +1,4 @@
-package com.example.movieswiki.model
+package com.example.movieswiki.Model
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

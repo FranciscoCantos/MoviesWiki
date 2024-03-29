@@ -8,11 +8,12 @@
     android:orientation="vertical"
     tools:context=".FilmDetailActivity">
 
-    <ImageView
+    <com.example.movies.AspectRatioImageView
         android:id="@+id/backdropImage"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:scaleType="centerCrop"
+        android:scaleType="fitCenter"
+        app:ratio="1.5"
         tools:srcCompat="@tools:sample/avatars" />
 
     <ScrollView

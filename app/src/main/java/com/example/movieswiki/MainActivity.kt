@@ -4,9 +4,13 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import com.example.movieswiki.databinding.ActivityMainBinding
 import com.example.movieswiki.model.MovieDbClient
 import com.example.movieswiki.model.MovieViewModel
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import kotlin.concurrent.thread
 
 data class Person(val name: String, val age: Int)
@@ -29,19 +33,16 @@ class MainActivity : AppCompatActivity() {
 
         binding.recyclerView.adapter = moviesAdapter
 
-        thread {
+        lifecycleScope.launch {
             val apiKey = getString(R.string.api_key)
             val popularMovies = MovieDbClient.service.listPopularMovies(apiKey)
-            val result = popularMovies.execute().body()
-            runOnUiThread {
-                if (result != null) {
-                    var movies: List<MovieViewModel> = result.results.map {
-                        MovieViewModel(it.title, it.poster_path)
-                    }
-                    moviesAdapter.movies = movies
-                    moviesAdapter.notifyDataSetChanged()
-                }
+
+            var movies: List<MovieViewModel> = popularMovies.results.map {
+                MovieViewModel(it.title, it.poster_path)
             }
+
+            moviesAdapter.movies = movies
+            moviesAdapter.notifyDataSetChanged()
         }
     }
 }
